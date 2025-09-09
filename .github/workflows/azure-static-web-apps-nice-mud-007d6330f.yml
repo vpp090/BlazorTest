@@ -23,7 +23,7 @@ jobs:
           dotnet-version: 9.0.x
 
       - name: Build and Publish Blazor WASM
-        run: dotnet publish BlazorWasmApp.csproj -c Release -o release
+        run: dotnet publish BlazorTest.csproj -c Release -o release
 
       - name: Deploy to Azure Static Web App
         uses: Azure/static-web-apps-deploy@v1
@@ -34,3 +34,4 @@ jobs:
           app_location: "release/wwwroot"
           api_location: ""
           output_location: ""
+
